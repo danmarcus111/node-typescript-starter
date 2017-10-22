@@ -1,0 +1,29 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:tsc",
+    "build:tsc": "tsc",
+    "clean": "rm -rf ./build",
+    "develop": "run-s clean build watch",
+    "start": "node ./build/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "run-p watch:tsc watch:node",
+    "watch:node": "nodemon -e js,html,css build/index.js",
+    "watch:tsc": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.46",
+    "nodemon": "^1.12.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.1"
+  }
+}

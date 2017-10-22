@@ -1,0 +1,15 @@
+node_modules
+build
+
+# log files
+npm-debug.log
+npm-debug**
+yarn-error.log
+
+# local artefacts
+.DS_Store
+./**/**/.DS_Store
+
+# test artefacts
+coverage
+.nyc_output
